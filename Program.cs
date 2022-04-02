@@ -6,12 +6,16 @@ namespace Кратность
     {
         static void Main(string[] args)
         {
-            Random NumberRandom = new Random();
+            Random numberRandom = new Random();
 
-            int randomNumber = NumberRandom.Next(1,27);
+            int startRandom = 1;
+            int stopRandom = 27;
+            int randomNumber = numberRandom.Next(startRandom,stopRandom);
             Console.WriteLine("Число - " + randomNumber);
+            int startNumber = 100;
+            int stopNumber = 1000;
 
-            for(int i =100;i<1000;i++)
+            for(int i =startNumber;i<stopNumber;i++)
             {
                 bool stopCicle = true;
                 int summand = 0;
@@ -19,8 +23,17 @@ namespace Кратность
                 while(stopCicle)
                 {
                     summand = summand + randomNumber;
-                    if (summand == i) { Console.WriteLine(i); stopCicle = false; }
-                    if (summand > i){ stopCicle = false; }
+
+                    if (summand == i)
+                    { 
+                        Console.WriteLine(i); 
+                        stopCicle = false; 
+                    }
+
+                    if (summand > i)
+                    { 
+                        stopCicle = false; 
+                    }
                 }
             }
         }
