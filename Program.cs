@@ -15,25 +15,11 @@ namespace Кратность
             int startNumber = 100;
             int stopNumber = 1000;
 
-            for(int i =startNumber;i<stopNumber;i++)
+            for (int i=randomNumber;i<stopNumber;i=i+randomNumber)
             {
-                bool stopCicle = true;
-                int summand = 0;
-
-                while(stopCicle)
+                if (i >= startNumber)
                 {
-                    summand = summand + randomNumber;
-
-                    if (summand == i)
-                    { 
-                        Console.WriteLine(i); 
-                        stopCicle = false; 
-                    }
-
-                    if (summand > i)
-                    { 
-                        stopCicle = false; 
-                    }
+                    Console.WriteLine(i);
                 }
             }
         }
